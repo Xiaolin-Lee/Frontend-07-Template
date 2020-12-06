@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>red light</title>
+
+    <style>
+        .container div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background: gray;
+        }
+        .container {
+            display: flex;
+            width: 330px;
+            justify-content: space-between;
+        }
+        .red.light {
+            background: red;
+        }
+        .yellow.light {
+            background: yellow;
+        }
+        .green.light {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="red" id="red"> 5s</div>
+    <div class="yellow" id="yellow"> 2s</div>
+    <div class="green" id="green"> 10s</div>
+    <button id="next">next</button>
+    <script type="application/javascript">
+        const s = 100;
+        const lights = document.getElementsByTagName('div');
+
+            function red() {
+                for (let ele of lights) {
+                    ele.classList.remove('light')
+                }
+                document.getElementById('red').classList.add('light');
+            }
+
+            function yellow() {
+                for (let ele of lights) {
+                    ele.classList.remove('light')
+                }
+                document.getElementById('yellow').classList.add('light');
+            }
+
+            function green() {
+                for (let ele of lights) {
+                    ele.classList.remove('light')
+                }
+                document.getElementById('green').classList.add('light');
+            }
+
+            function sleep(time) {
+                return new Promise((resolve) => {
+                    setTimeout(resolve, time)
+                });
+            }
+
+            function happen(element) {
+                    return new Promise((resolve) => {
+                        element.addEventListener('click', resolve)
+                });
+            }
+            // 回掉地狱
+            // function go() {
+            //     green();
+            //     setTimeout(() => {
+            //         yellow();
+            //         setTimeout(() => {
+            //             red();
+            //             setTimeout(() => {}, 5 * s)
+            //         }, 2 * s)
+            //     }, 10 * s)
+            // }
+
+        //async 版本
+        // function go() {
+        //     green();
+        //     sleep(10 * s)
+        //     .then(() => {
+        //         yellow();
+        //         return sleep(2 * s);
+        //     })
+        //     .then(() => {
+        //         red();
+        //         return sleep(5 * s);
+        //     })
+        // }
+
+        // async function go() {
+        //     green();
+        //     await happen(10 * s);
+        //     yellow();
+        //     await sleep(2 * s);
+        //     red();
+        //     await sleep(5 * s);
+        // }
+
+        async function go() {
+            while (true) {
+                green();
+                await happen(document.getElementById('next'));
+                yellow();
+                await happen(document.getElementById('next'));
+                red();
+                await happen(document.getElementById('next'));
+            }
+        }
+
+    </script>
+</div>
+</body>
+</html>
