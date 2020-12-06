@@ -48,7 +48,7 @@ function userMove(i, j) {
     if (!!willWin(pattern, next)) {
         console.log(`${boardText[ next]} will win!`)
     }
-    // computerMove(bestChoice(pattern, current));
+    computerMove(bestChoice(pattern, current));
 }
 
 function computerMove(choice) {
