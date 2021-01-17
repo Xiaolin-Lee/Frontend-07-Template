@@ -1,0 +1,170 @@
+<!--
+ * @Author: ailiang
+ * @Date: 2021-01-11 14:37:22
+ * @LastEditors: ailiang
+ * @LastEditTime: 2021-01-12 14:14:37
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>内置对象</title>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script>
+</head>
+
+<body>
+<div id="container"></div>
+<script>
+    let nodes = [
+        {
+            id: "valueProperty",
+            label: "值属性",
+            x: 150,
+            y: 100,
+            children: [{
+                id: 'infinity',
+                label: 'Infinity',
+                x: 150,
+                y: 100,
+            }]
+        },
+        {
+            id: "functionProperty",
+            label: "函数属性",
+            x: 150,
+            y: 300
+        },
+        {
+            id: "fundamentalObj",
+            label: "基本对象",
+            x: 150,
+            y: 500
+        },
+        {
+            id: "errorObj",
+            label: "错误对象",
+            x: 150,
+            y: 700
+        },
+        {
+            id: "dateAndNumber",
+            label: "数字和\n日期对象",
+            size: 100,
+            x: 150,
+            y: 900
+        },
+        {
+            id: "textProcessing",
+            label: "字符串",
+            x: 150,
+            y: 1100
+        },
+        {
+            id: "indexedCollections",
+            label: "可索引的\n集合对象",
+            x: 150,
+            y: 1300
+        },
+        {
+            id: "keyedCollections",
+            label: "使用键的\n集合对象",
+            x: 150,
+            y: 1500
+        },
+        {
+            id: "structuredData",
+            label: "结构化数据",
+            x: 150,
+            y: 1700
+        },
+        {
+            id: "controlAbstractionObjects",
+            label: "控制\n抽象对象",
+            x: 150,
+            y: 1900
+        },
+        {
+            id: "reflection",
+            label: "反射",
+            x: 150,
+            y: 2100
+        },
+        {
+            id: "internationalization",
+            label: "国际化",
+            x: 150,
+            y: 2300
+        },
+        {
+            id: "webAssembly",
+            label: "Web\nAssembly",
+            x: 150,
+            y: 2500
+        },
+        {
+            id: "other",
+            label: "其他",
+            x: 150,
+            y: 2700
+        }
+    ];
+
+    const edges = nodes.map((node, index) => {
+        if (index === (nodes.length - 1) ) {
+            return;
+        }
+
+
+        return {
+            source: node.id,
+            target: nodes[index+1] && nodes[index+1].id
+        }
+    }).filter(e => !!e);
+
+    const data = {
+        nodes,
+        edges,
+    };
+
+    const graph = new G6.Graph({
+        container: "container",
+        width: 500,
+        height: 3000,
+        defaultNode: {
+            shape: "circle",
+            size: [100],
+            color: "#5B8FF9",
+            style: {
+                fill: "#9EC9FF",
+                lineWidth: 3
+            },
+            labelCfg: {
+                style: {
+                    fill: "#fff",
+                    fontSize: 20
+                }
+            }
+        },
+        defaultEdge: {
+            style: {
+                stroke: "#e2e2e2"
+            }
+        },
+        layout: {
+            type: 'dagre',
+            rankdir: 'UD',
+            align: 'DL',
+            nodesep: 20,
+            ranksep: 50,
+            controlPoints: true,
+        }
+    });
+
+    graph.data(data);
+    graph.render();
+
+</script>
+</body>
+
+</html>
