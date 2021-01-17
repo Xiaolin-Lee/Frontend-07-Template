@@ -10,7 +10,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>内置对象</title>
-    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.1.0/build/g6.js"></script>
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.1.1/dist/g6.min.js"></script>
 </head>
 
 <body>
@@ -27,109 +27,351 @@
                 label: 'Infinity',
                 x: 150,
                 y: 100,
-            }]
+            },{
+                id: 'NaN',
+                label: 'NaN',
+                x: 150,
+                y: 100,
+            },{
+                id: 'undefined',
+                label: 'undefined',
+                x: 150,
+                y: 100,
+            },{
+                id: 'globalThis',
+                label: 'globalThis',
+                x: 150,
+                y: 100,
+            },]
         },
         {
             id: "functionProperty",
             label: "函数属性",
             x: 150,
-            y: 300
+            y: 300,
+            children: [{
+                id: 'eval',
+                label: 'eval()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'uneval',
+                label: 'uneval()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'isFinite',
+                label: 'isFinite()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'isNaN',
+                label: 'isNaN()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'parseFloat',
+                label: 'parseFloat()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'parseInt',
+                label: 'parseInt()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'decodeURI',
+                label: 'decodeURI()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'decodeURIComponent',
+                label: 'decodeURIComponent()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'encodeURI',
+                label: 'encodeURI()',
+                x: 150,
+                y: 100,
+            },{
+                id: 'encodeURIComponent',
+                label: 'encodeURIComponent()',
+                x: 150,
+                y: 100,
+            },]
         },
         {
             id: "fundamentalObj",
             label: "基本对象",
             x: 150,
-            y: 500
+            y: 500,
+            children: [{
+                id:'Object',
+                label: 'Object'
+            },{
+                id:'Function',
+                label: 'Function'
+            },{
+                id:'Boolean',
+                label: 'Boolean'
+            },{
+                id:'Symbol',
+                label: 'Symbol'
+            },]
         },
         {
             id: "errorObj",
             label: "错误对象",
             x: 150,
-            y: 700
+            y: 700,
+            children: [{
+                id:'Error',
+                label: 'Error'
+            },{
+                id:'AggregateError',
+                label: 'AggregateError'
+            },{
+                id:'InternalError',
+                label: 'EvalError'
+            },{
+                id:'RangeError',
+                label: 'RangeError'
+            },{
+                id:'ReferenceError',
+                label: 'ReferenceError'
+            },{
+                id:'SyntaxError',
+                label: 'SyntaxError'
+            },{
+                id:'TypeError',
+                label: 'TypeError'
+            },{
+                id:'URIError',
+                label: 'URIError'
+            },]
         },
         {
             id: "dateAndNumber",
             label: "数字和\n日期对象",
             size: 100,
             x: 150,
-            y: 900
+            y: 900,
+            children: [{
+                id:'Number',
+                label: 'Number'
+            },{
+                id:'BigInt',
+                label: 'BigInt'
+            },{
+                id:'Math',
+                label: 'Math'
+            },{
+                id:'Date',
+                label: 'Date'
+            },]
         },
         {
             id: "textProcessing",
             label: "字符串",
             x: 150,
-            y: 1100
+            y: 1100,
+            children: [{
+                id:'String',
+                label: 'String'
+            },{
+                id:'RegExp',
+                label: 'RegExp'
+            },]
         },
         {
             id: "indexedCollections",
             label: "可索引的\n集合对象",
             x: 150,
-            y: 1300
+            y: 1300,
+            children: [{
+                id: 'Array',
+                label: 'Array'
+            },{
+                id: 'Int8Array',
+                label: 'Int8Array'
+            },{
+                id: 'Uint8Array',
+                label: 'Uint8Array'
+            },{
+                id: 'Int16Array',
+                label: 'Int16Array'
+            },{
+                id: 'Int32Array',
+                label: 'Int32Array'
+            },{
+                id: 'Float32Array',
+                label: 'Float32Array'
+            },{
+                id: 'BigInt64Array',
+                label: 'BigInt64Array'
+            },]
         },
         {
             id: "keyedCollections",
             label: "使用键的\n集合对象",
             x: 150,
-            y: 1500
+            y: 1500,
+            children: [{
+                id: 'Map',
+                label: 'Map'
+            },{
+                id: 'Set',
+                label: 'Set'
+            },{
+                id: 'WeakMap',
+                label: 'WeakMap'
+            },{
+                id: 'WeakSet',
+                label: 'WeakSet'
+            },]
         },
         {
             id: "structuredData",
             label: "结构化数据",
             x: 150,
-            y: 1700
+            y: 1700,
+            children: [{
+                id: 'ArrayBuffer',
+                label: 'ArrayBuffer'
+                },{
+                id: 'SharedArrayBuffer',
+                label: 'SharedArrayBuffer'
+                },{
+                id: 'Atomics',
+                label: 'Atomics'
+                },{
+                id: 'DataView',
+                label: 'DataView'
+                },{
+                id: 'JSON',
+                label: 'JSON'
+                },
+            ]
         },
         {
             id: "controlAbstractionObjects",
             label: "控制\n抽象对象",
             x: 150,
-            y: 1900
+            y: 1900,
+            children: [{
+                id: 'Promise',
+                label: 'Promise'
+            },{
+                id: 'Generator',
+                label: 'Generator'
+            },{
+                id: 'GeneratorFunction',
+                label: 'GeneratorFunction'
+            },{
+                id: 'AsyncFunction',
+                label: 'AsyncFunction'
+            }
+            ]
         },
         {
             id: "reflection",
             label: "反射",
             x: 150,
-            y: 2100
+            y: 2100,
+            children: [{
+                id: 'Reflect',
+                label: 'Reflect'
+            },{
+                id: 'Proxy',
+                label: 'Proxy'
+            },]
         },
         {
             id: "internationalization",
             label: "国际化",
             x: 150,
-            y: 2300
+            y: 2300,
+            children: [{
+                id: 'Intl',
+                label: 'Intl'
+            },{
+                id: 'Collator',
+                label: 'Intl.Collator'
+            },{
+                id: 'DateTimeFormat',
+                label: 'Intl.DateTimeFormat'
+            },{
+                id: 'ListFormat',
+                label: 'Intl.ListFormat'
+            },{
+                id: 'NumberFormat',
+                label: 'Intl.NumberFormat'
+            },{
+                id: 'PluralRules',
+                label: 'Intl.PluralRules'
+            },{
+                id: 'RelativeTimeFormat',
+                label: 'Intl.RelativeTimeFormat'
+            },{
+                id: 'Locale',
+                label: 'Intl.Locale'
+            },]
         },
         {
             id: "webAssembly",
             label: "Web\nAssembly",
             x: 150,
-            y: 2500
+            y: 2500,
+            children: [
+                {
+                    id: 'WebAssembly',
+                    label: 'WebAssembly'
+                },{
+                    id: 'Module',
+                    label: 'WebAssembly.Module'
+                },{
+                    id: 'Instance',
+                    label: 'WebAssembly.Instance'
+                },{
+                    id: 'Memory',
+                    label: 'WebAssembly.Memory'
+                },{
+                    id: 'Table',
+                    label: 'WebAssembly.Table'
+                },{
+                    id: 'LinkError',
+                    label: 'WebAssembly.LinkError'
+                },{
+                    id: 'CompileError',
+                    label: 'WebAssembly.CompileError'
+                },{
+                    id: 'RuntimeError',
+                    label: 'WebAssembly.RuntimeError'
+                },
+            ]
         },
         {
             id: "other",
             label: "其他",
             x: 150,
-            y: 2700
+            y: 2700,
+            children: [{
+                id: 'arguments',
+                label: 'arguments'
+            }]
         }
     ];
 
-    const edges = nodes.map((node, index) => {
-        if (index === (nodes.length - 1) ) {
-            return;
-        }
-
-
-        return {
-            source: node.id,
-            target: nodes[index+1] && nodes[index+1].id
-        }
-    }).filter(e => !!e);
-
     const data = {
-        nodes,
-        edges,
-    };
+        id: 'root',
+        label: 'Realm',
+        children: nodes,
+    }
 
-    const graph = new G6.Graph({
+    const graph = new G6.TreeGraph({
         container: "container",
-        width: 500,
+        width: 1000,
         height: 3000,
         defaultNode: {
             shape: "circle",
@@ -151,14 +393,29 @@
                 stroke: "#e2e2e2"
             }
         },
+        modes: {
+            default: [
+                {
+                    type: 'collapse-expand',
+                    onChange(item, collapsed) {
+                        const icon = item.get('group').findByClassName('collapse-icon');
+                        if (collapsed) {
+                            icon.attr('symbol', EXPAND_ICON);
+                        } else {
+                            icon.attr('symbol', COLLAPSE_ICON);
+                        }
+                    },
+                },
+                'drag-canvas',
+                'zoom-canvas',
+            ],
+        },
         layout: {
-            type: 'dagre',
-            rankdir: 'UD',
-            align: 'DL',
-            nodesep: 20,
-            ranksep: 50,
-            controlPoints: true,
-        }
+            type: 'compactBox',
+            direction: 'LR',
+            nodeSep: 50,
+            radial: false,
+        },
     });
 
     graph.data(data);

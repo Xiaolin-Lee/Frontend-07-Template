@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e51ed5c-79bb-41a6-bd56-bee69c476946" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Week06/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week06/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week07/StringIntConvert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Week07/rename.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week07/rename.html" beforeDir="false" afterPath="$PROJECT_DIR$/Week07/rename.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Week07" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -51,7 +50,7 @@
       <updated>1609085987164</updated>
       <workItem from="1609085989275" duration="151000" />
       <workItem from="1609156748902" duration="29571000" />
-      <workItem from="1610878925618" duration="3057000" />
+      <workItem from="1610878925618" duration="6079000" />
     </task>
     <servers />
   </component>
