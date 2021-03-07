@@ -1,4 +1,5 @@
 const net = require('net');
+const ResponseParser = require('./ResponseParser')
 
 class Request {
     constructor(options) {
@@ -57,9 +58,11 @@ class Request {
     }
 
     toString() {
-        return `${this.method} ${this.path} HTTP/1.1\r 
-        ${Object.keys(this.headers).map(k => `${k} : ${this.headers[k]}`).join('\r\n')}\r\r
-        ${this.bodyText}`;
+        return ` ${this.method} ${this.path} HTTP/1.1\r 
+${Object.keys(this.headers).map(k => `${k}: ${this.headers[k]}`).join('\r\n')}\r
+\r
+${this.bodyText}
+`;
     }
 }
 
