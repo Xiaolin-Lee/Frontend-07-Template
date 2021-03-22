@@ -1,0 +1,17 @@
+@keyframes myAnimation {
+    from {
+        background: #000;
+    }
+    to {
+        background: #fff;
+    }
+}
+
+#animation {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    animation-name: myAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}

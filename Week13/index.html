@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+</head>
+<body>
+    <div id="a">
+        <span>1</span>
+        <p>2</p>
+        <a href="#">3</a>
+        <div>4</div>
+    </div>
+
+    <script type="application/javascript">
+        const element = document.getElementById('a');
+
+        function reverseChild(element){
+            const range = new Range();
+            range.selectNodeContents(element);
+
+            const fragment = range.extractContents();
+            let l = fragment.childNodes.length;
+            while (!! --l) {
+                fragment.appendChild(fragment.childNodes[l]);
+            }
+
+            element.appendChild(fragment);
+        }
+
+        reverseChild(element);
+    </script>
+</body>
+</html>
